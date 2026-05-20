@@ -4,7 +4,10 @@
   font-weight: <weight>;
   font-style: normal;
 } */
-
+:where(h1, h2, h3, h4, p){
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     padding: 0;
@@ -153,6 +156,16 @@ h1{
     height: 100%;
     padding: 0 20px;
     position: relative;
+}
+
+/* SERVICES */
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
 }
 
 /* FOOTER */
