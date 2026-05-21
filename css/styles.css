@@ -183,6 +183,7 @@ h1{
 @media (max-width: 768px){
     .hero{
         height: auto;
+        width: auto;
     }
     .hero .container{
         padding-top: 120px;
