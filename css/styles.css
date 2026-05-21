@@ -81,10 +81,9 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: white;
     position: relative;
-    padding-right: 0;
-    padding-left: 0;
 }
 .content{
     display: flex;
@@ -92,7 +91,6 @@ ul{
     width: 100%;
     flex-wrap: wrap;
     gap: 40px;
-    padding: 0 20px;
 }
 .text{
     display: flex;
@@ -138,10 +136,10 @@ h1{
     display: flex;
     align-items: center;
     bottom: 5px;
-    left: 0; 
+    /* left: 0; 
     right: 0; 
     margin-inline: auto; 
-    width: fit-content;
+    width: fit-content; */
 }
 .nuvvologo img{
     width: auto;
@@ -153,10 +151,10 @@ h1{
     display: flex;
     align-items: center;
     top: 10px;
-    left: 0; 
+    /* left: 0; 
     right: 0; 
     margin-inline: auto; 
-    width: fit-content;
+    width: fit-content; */
 }
 .mirror-nuvvologo img{
     width: auto;
@@ -183,7 +181,6 @@ h1{
 @media (max-width: 768px){
     .hero{
         height: auto;
-        width: auto;
     }
     .hero .container{
         padding-top: 120px;
