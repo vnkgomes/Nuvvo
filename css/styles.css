@@ -28,6 +28,9 @@ body {
 h2{
     font-size: clamp(2rem, 1.464rem + 1.429vw, 2.75rem);
 }
+p{
+    font-weight: 600;
+}
 
 /* HEADER */
 
@@ -88,9 +91,6 @@ ul{
     flex-basis: 900px;
     flex-shrink: 1;
 }
-.text p{
-    font-weight: 600;
-}
 .button-container{
     display: flex;
     flex-direction: column;
@@ -123,38 +123,55 @@ h1{
 .hero h1 span{
     color: rgb(121, 154, 39);
 }
-.divider-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.divider{
-    display: flex;
-    justify-content: center;
-    width: auto;
+/* TEST */
+.nuvvologo{
     position: absolute;
-    bottom: 0;
+    display: flex;
+    align-items: center;
+    bottom: 5px;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
 }
-.divider p{
-    font-size: clamp(5rem, -0.357rem + 14.286vw, 12.5rem);
-    font-weight: 800;
-    letter-spacing: clamp(0.625rem, -0.268rem + 2.381vw, 1.875rem);
+.nuvvologo img{
+    width: auto;
+    height: clamp(3.75rem, -0.268rem + 10.714vw, 9.375rem); 
+    /* 60px */
 }
-#dividertop{
-    bottom: -40px;
+.mirror-nuvvologo{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
 }
-#dividerbot{
-    color:  rgb(121, 154, 39);
-    top: -45px;
+.mirror-nuvvologo img{
+    width: auto;
+    height: clamp(3.75rem, -0.268rem + 10.714vw, 9.375rem);
 }
+.N{
+    margin-right: clamp(1.25rem, -0.313rem + 4.167vw, 3.438rem);
+    /* 20px */
+}
+.U{
+    margin-right: clamp(0.938rem, 0.045rem + 2.381vw, 2.188rem);
+    /* 15px */
+}
+.V{
+    margin-right: clamp(0.625rem, 0.179rem + 1.19vw, 1.25rem);
+    /* 10px */
+}
+.O{
+    margin-left: clamp(0.438rem, 0.08rem + 0.952vw, 0.938rem);
+    /* 7px */
+}
+/* TEST */
+
 @media (max-width: 768px){
-    #dividertop{
-        bottom: -15px;
-    }
-    #dividerbot{
-        top: -15px;
-    }
     .hero{
         height: auto;
     }
@@ -184,7 +201,7 @@ h1{
     align-items: center;
 }
 .about span{
-    color: rgb(121, 154, 39);
+    color: #799a27;
 }
 .text-aling{
     display: flex;
@@ -331,6 +348,10 @@ input, select, textarea{
     border-radius: 4px;
     width: 100%;
     font-size: 0.9rem;
+    color: white;
+}
+input:autofill, select:autofill, textarea:autofill{
+    background-color: rgb(16, 23, 49);
 }
 select{
     cursor: pointer;
