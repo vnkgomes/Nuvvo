@@ -143,7 +143,7 @@ h1{
 }
 .nuvvologo img{
     width: auto;
-    height: clamp(3.75rem, -0.268rem + 10.714vw, 9.375rem); 
+    height: clamp(3.55rem, -0.268rem + 10.714vw, 9.375rem); 
     /* 60px */
 }
 .mirror-nuvvologo{
@@ -158,7 +158,7 @@ h1{
 }
 .mirror-nuvvologo img{
     width: auto;
-    height: clamp(3.75rem, -0.268rem + 10.714vw, 9.375rem);
+    height: clamp(3.55rem, -0.268rem + 10.714vw, 9.375rem);
 }
 .N{
     margin-right: clamp(1.25rem, -0.313rem + 4.167vw, 3.438rem);
