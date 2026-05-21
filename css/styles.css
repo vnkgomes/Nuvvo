@@ -136,7 +136,7 @@ h1{
     bottom: 0;
 }
 .divider p{
-    font-size: clamp(5.625rem, 0.714rem + 13.095vw, 12.5rem);
+    font-size: clamp(5rem, -0.357rem + 14.286vw, 12.5rem);
     font-weight: 800;
     letter-spacing: clamp(0.625rem, -0.268rem + 2.381vw, 1.875rem);
 }
@@ -148,13 +148,17 @@ h1{
 }
 @media (max-width: 768px){
     #dividertop{
-    bottom: -15px;
-}
+        bottom: -15px;
+    }
     #dividerbot{
-    top: -15px;
-}
+        top: -15px;
+    }
     .hero{
         height: auto;
+    }
+    .hero .container{
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 }
 
