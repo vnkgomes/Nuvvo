@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 1440px;
-    padding: 100px 20px;
+    padding: clamp(3.125rem, 0.893rem + 5.952vw, 6.25rem) 20px;
 }
 h2{
     font-size: clamp(2rem, 1.464rem + 1.429vw, 2.75rem);
@@ -176,7 +176,7 @@ h1{
 }
 .about .container{
     position: relative;
-    padding-top: 300px;
+    padding-top: clamp(6.25rem, -2.679rem + 23.81vw, 18.75rem);
 }
 
 /* SERVICES */
