@@ -52,6 +52,8 @@ header{
 header .container{
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 a{
     text-decoration: none;
@@ -81,6 +83,8 @@ ul{
     justify-content: center;
     color: white;
     position: relative;
+    padding-right: 0;
+    padding-left: 0;
 }
 .content{
     display: flex;
@@ -88,6 +92,7 @@ ul{
     width: 100%;
     flex-wrap: wrap;
     gap: 40px;
+    padding: 0 20px;
 }
 .text{
     display: flex;
@@ -194,7 +199,7 @@ h1{
     justify-content: center;
     width: 100%;
     background-color: rgb(16, 23, 49);
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
     border-top: 1px solid rgb(40, 42, 49);
 }
 .about .container{
@@ -257,7 +262,7 @@ h1{
     display: flex;
     justify-content: center;
     background-color: rgb(16, 23, 49);
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 20px 20px;
     border-bottom: 1px solid rgb(40, 42, 49);
 }
 .getintouch .container{
