@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <title>Nuvvo</title>
 </head>
 <body>
@@ -122,9 +123,42 @@ Precisa otimizar o tempo da sua equipe? Oferecemos a integração de ferramentas
 
         <section class="getintouch">
             <div class="container">
-                <div>
-                    <h2>Como Funciona o Nosso Processo?</h2>
-                    <p>Criação de guias e manuais da marca para padronizar e profissionalizar a sua comunicação.</p>
+                <div class="textcontent">
+                    <h2>Vamos construir algo incrível <span>juntos</span></h2>
+                    <p>Conte-nos sobre o seu projeto e entraremos em contato em até 24 horas. Sem compromisso, sem pressão — apenas uma conversa sobre o que você precisa.</p>
+                
+                    <div class="contact-option-container">
+                        <div class="contact-option">
+                            <div class="svg-background">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <h3>EMAIL</h3>
+                                <p>contato@thenuvvo.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-option">
+                            <div class="svg-background">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h3>LOCALIZAÇÃO</h3>
+                                <p>Brasil/Canada</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-option">
+                            <div class="svg-background">
+                                <span class="material-symbols-outlined">language</span>
+                            </div>
+                            <div>
+                                <h3>LINGUAS</h3>
+                                <p>Portugues/Ingles</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="form-container">
                     <form>
@@ -134,19 +168,23 @@ Precisa otimizar o tempo da sua equipe? Oferecemos a integração de ferramentas
                         </div>
                         <div>
                             <label for="email">Email <span style="color: rgb(248, 113, 113);">*</span></label>
-                            <input id="email" placeholder="email@provedor.com" type="text" value name="email" required>
+                            <input id="email" autocomplete="email" placeholder="email@provedor.com" type="email" value name="email" required>
                         </div>
                         <div>
-                            <label>Nome da empresa</label>
-                            <input>
+                            <label for="company">Empresa</label>
+                            <input id="company" placeholder="Nome da sua empresa" type="text" value name="company">
                         </div>
                         <div>
-                            <label>Qual servico tem interesse <span style="color: rgb(248, 113, 113);">*</span></label>
-                            <select id="name" placeholder="Nome completo" type="text" value name="name" required></select>
+                            <label for="service">Qual serviço tem interesse <span style="color: rgb(248, 113, 113);">*</span></label>
+                            <select id="service" required>
+                                <option value="" disabled selected>Selecione um serviço</option>
+                                <option value="web-desing">Criação de Website</option>
+                                <option value="others">Outros</option>
+                            </select>
                         </div>
                         <div>
-                            <label for="message">Mensagem</label>
-                            <input id="message" rows="5">
+                            <label for="message">Mensagem <span style="color: rgb(248, 113, 113);">*</span></label>
+                            <textarea id="message" rows="5" placeholder="Nos conte mais sobre seus objetivos..." type="text" value name="message" required></textarea>
                         </div>
                         <button>
                             Enviar

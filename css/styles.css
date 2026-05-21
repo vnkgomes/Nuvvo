@@ -8,6 +8,9 @@
     margin: 0;
     padding: 0;
 }
+:where(h1, h2){
+    margin-bottom: 24px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -115,7 +118,6 @@ h1{
     font-size: 3.75rem;
     line-height: 56px;
     font-weight: 700;
-    margin: 0 0 10px 0;
 }
 .hero h1 span{
     color: rgb(121, 154, 39);
@@ -200,13 +202,56 @@ h1{
 }
 
 /* Entre em contato */
+
 .getintouch{
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(16, 23, 49);
+    color: white;
 }
 .getintouch .container{
     flex-direction: row;
+    gap: 4rem;
+    /* flex-wrap: wrap; */
+}
+.textcontent span{
+    color: rgb(121, 154, 39);
+}
+.textcontent > p{
+    margin-bottom: 2.5rem;
+}
+.contact-option-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.contact-option{
+    display: flex;
+    align-items: center;
+    gap: 0.87rem;
+}
+.svg-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(121, 154, 39, 0.418);
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+}
+.material-symbols-outlined{
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: rgb(121, 154, 39);
 }
 .form-container{
     display: block;
@@ -218,24 +263,47 @@ form{
     width: 600px;
     padding: 2rem;
     gap: 1.25rem;
-    border: 1px solid red;
+    background-color: rgb(8, 13, 32); 
+    border: 1px solid rgb(40, 42, 49);
     border-radius: 8px;
+    font-size: 0.80rem;
+    font-weight: 500;
 }
-label{
-    margin-bottom: 6px;
-}
-input, select{
-    padding: 11px 14px;
-    border: 1px solid red;
-    border-radius: 4px;
-}
-#message{
-    height: 120px;
-}
-.form-container div{
+form div{
     display: flex;
     flex-direction: column;
 }
+label{
+    margin-bottom: 6px;
+    
+}
+input, select, textarea{
+    box-sizing: border-box;
+    padding: 11px 14px;
+    background-color: rgb(16, 23, 49);
+    border: 1px solid rgb(40, 42, 49);
+    border-radius: 4px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+select{
+    cursor: pointer;
+    padding-right: 36px;
+    color: white;
+}
+textarea{
+    height: 120px;
+    resize: vertical;
+}
+form button{
+    padding: 13px 24px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    margin-top: 0.25rem;
+}
+
+
 /* FOOTER */
 
 footer{
