@@ -130,7 +130,6 @@ h1{
 .hero h1 span{
     color: rgb(121, 154, 39);
 }
-/* TEST */
 .nuvvologo{
     position: absolute;
     display: flex;
@@ -151,10 +150,6 @@ h1{
     display: flex;
     align-items: center;
     top: 10px;
-    /* left: 0; 
-    right: 0; 
-    margin-inline: auto; 
-    width: fit-content; */
 }
 .mirror-nuvvologo img{
     width: auto;
@@ -176,7 +171,6 @@ h1{
     margin-left: clamp(0.438rem, 0.08rem + 0.952vw, 0.938rem);
     /* 7px */
 }
-/* TEST */
 
 @media (max-width: 768px){
     .hero{
@@ -234,6 +228,41 @@ h1{
     border-top: 1px solid rgb(40, 42, 49);
     border-bottom: 1px solid rgb(40, 42, 49);
 }
+.services .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 4rem;
+    align-items: start;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1480px;
+}
+.textcontent{
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+}
+.textcontent span{
+    color: rgb(121, 154, 39);
+}
+.textcontent > p{
+    margin-bottom: 2.5rem;
+}
+.card-container{
+    display: grid;
+    padding: 0 20px 0 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.card{
+    background-color: rgb(16, 23, 49);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(40, 42, 49);
+}
+.card > h3{
+    margin-bottom: 1rem;
+    color: #799a27;
+}
 
 /* More Services */
 
@@ -242,6 +271,26 @@ h1{
     justify-content: center;
     width: 100%;
     background-color: rgb(16, 23, 49);
+}
+.more-services .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 4rem;
+    align-items: start;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1480px;
+}
+.more-services .card{
+    background-color: rgb(8, 13, 32);
+}
+.more-services .textcontent{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 20px 0 0;
+    text-align: end;
 }
 
 /* Our Process */
@@ -278,17 +327,6 @@ h1{
     width: 80px;
     background-color: rgb(121, 154, 39);
     margin-bottom: 20px;
-}
-.textcontent{
-    box-sizing: border-box;
-    padding: 0 20px;
-    /* width: 700px; */
-}
-.textcontent span{
-    color: rgb(121, 154, 39);
-}
-.textcontent > p{
-    margin-bottom: 2.5rem;
 }
 .contact-option-container{
     display: flex;
