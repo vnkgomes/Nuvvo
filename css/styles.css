@@ -265,11 +265,12 @@ h1{
 }
 .getintouch .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-    /* flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap; */
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 4rem;
+    align-items: start;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1480px;
 }
 .line{
     display: inline-block;
@@ -279,6 +280,8 @@ h1{
     margin-bottom: 20px;
 }
 .textcontent{
+    box-sizing: border-box;
+    padding: 0 20px;
     /* width: 700px; */
 }
 .textcontent span{
@@ -313,28 +316,26 @@ h1{
     height: 36px;
 }
 .material-symbols-outlined{
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  color: rgb(121, 154, 39);
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: rgb(121, 154, 39);
 }
 .form-container{
-    display: block;
-    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 form{
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
-    /* width: 600px; */
     padding: clamp(1rem, 0.286rem + 1.905vw, 2rem);
     gap: 1.25rem;
     background-color: rgb(8, 13, 32); 
@@ -358,8 +359,9 @@ input, select, textarea{
     border: 1px solid rgb(40, 42, 49);
     border-radius: 4px;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
     color: white;
+    outline: none;
 }
 input:autofill, select:autofill, textarea:autofill{
     background-color: rgb(16, 23, 49);
@@ -370,8 +372,8 @@ select{
     color: white;
 }
 textarea{
-    height: 120px;
     resize: vertical;
+    min-height: 150px;
 }
 form button{
     padding: 13px 24px;
