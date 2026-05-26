@@ -361,8 +361,9 @@ h1{
     font-size: 1.5rem;
 }
 .our-process-grid{
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 0 20px;
     column-gap: 2rem;
     row-gap: 6rem;
