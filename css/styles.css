@@ -525,6 +525,9 @@ form button{
     .getintouch .container{
         gap: 2rem;
     }
+    .getintouch .textcontent{
+        padding: 0 20px;
+    }
 }
 
 /* FOOTER */
