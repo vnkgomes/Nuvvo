@@ -355,6 +355,7 @@ h1{
 .our-process h2{
     margin-bottom: 100px;
     padding: 0 20px;
+    text-align: center;
 }
 .our-process h3{
     font-size: 1.5rem;
@@ -399,6 +400,12 @@ h1{
     }
     .our-process-grid{
         row-gap: 2rem;
+    }
+    .card-text div{
+        justify-content: center;
+    }
+    .card-text div > .material-symbols-outlined{
+        font-size: 25px;
     }
 }
 
