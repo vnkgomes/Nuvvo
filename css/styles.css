@@ -420,7 +420,7 @@ h1{
 }
 .getintouch .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 4rem;
     align-items: start;
     padding-left: 0;
