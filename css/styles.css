@@ -250,9 +250,11 @@ h1{
 }
 .card-container{
     display: grid;
-    padding: 0 20px 0 0;
-    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    margin-inline: auto;
+    padding: 0 20px 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));;
+    gap: 1rem;
 }
 .card{
     background-color: rgb(16, 23, 49);
@@ -264,6 +266,7 @@ h1{
     margin-bottom: 1rem;
     color: #799a27;
 }
+
 @media (max-width: 768px){
     .services .container{
         gap: 2rem;
@@ -271,9 +274,13 @@ h1{
     .services .textcontent{
         padding: 0 20px;
     }
-    .services .card-container{
+    /* .services .card-container{
         padding: 0 20px;
         grid-template-columns: 1fr;
+        grid-template-rows: 5 1fr;
+    } */
+    .services .grid-span-2{
+        grid-column: none;
     }
 }
 /* More Services */
