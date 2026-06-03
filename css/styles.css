@@ -4,6 +4,10 @@
   font-weight: <weight>;
   font-style: normal;
 } */
+
+*{
+    box-sizing: border-box;
+ }
 html {
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
@@ -53,13 +57,20 @@ header{
 header .container{
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 0;
     padding-top: 0;
+    background-color: rgba(0, 0, 0, 0.623);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgb(40, 42, 49);
+    border-radius: 50px;
+    margin: 0 20px;
 }
 a{
     text-decoration: none;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 0.875rem;
 }
 ul{
     display: flex;
@@ -76,28 +87,25 @@ ul{
     height: 100vh;
     width: 100%;
     margin-top: -80px;
-    background-color: rgb(8, 13, 32);
+    background: linear-gradient(90deg,rgba(0, 0, 0, 1) 10%, rgba(121, 154, 39, 0.418) 50%, rgba(0, 0, 0, 1) 90%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(300px);
 }
 .hero .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     color: white;
-    position: relative;
+    
 }
 .content{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    flex-wrap: wrap;
-    gap: 40px;
 }
-.text{
-    display: flex;
-    flex-direction: column;
-    flex-basis: 900px;
-    flex-shrink: 1;
+.text p{
+    margin-bottom: 40px;
 }
 .button-container{
     display: flex;
@@ -112,26 +120,28 @@ ul{
     margin-bottom: 16px;
 }
 button{
-    background-color: rgb(121, 154, 39);
-    color: white;
+    background-color: #c0f928;
+    color: black;
     border: none;
-    padding: 16px 50px;
+    padding: 16px 20px;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 100%;
 }
 h1{
     font-size: clamp(3rem, 2.464rem + 1.429vw, 3.75rem);
     line-height: 56px;
     font-weight: 700;
+    margin-bottom: 40px;
 }
 .hero h1 span{
-    color: rgb(121, 154, 39);
+    color: #c0f928;
+    
 }
-.nuvvologo{
+/* .nuvvologo{
     position: absolute;
     display: flex;
     align-items: center;
@@ -154,20 +164,20 @@ h1{
 }
 .N{
     margin-right: clamp(1.25rem, -0.313rem + 4.167vw, 3.438rem);
-    /* 20px */
+    
 }
 .U{
     margin-right: clamp(0.938rem, 0.045rem + 2.381vw, 2.188rem);
-    /* 15px */
+    
 }
 .V{
     margin-right: clamp(0.625rem, 0.179rem + 1.19vw, 1.25rem);
-    /* 10px */
+   
 }
 .O{
     margin-left: clamp(0.438rem, 0.08rem + 0.952vw, 0.938rem);
-    /* 7px */
-}
+    
+} */
 
 @media (max-width: 768px){
     .hero{
