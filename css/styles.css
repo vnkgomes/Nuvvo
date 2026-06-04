@@ -269,16 +269,31 @@ h1{
     display: grid;
     gap: 3.125rem;
 }
+.more-services .textcontent > p{
+    margin-bottom: 2.5rem;
+}
+.textcontent ul{
+    display: flex;
+    flex-direction: column;
+    color: rgb(154 153 141);
+    gap: 20px;
+    padding: 0;
+    list-style-position: inside;
+    font-weight: 600;
+}
+.textcontent ul li{
+    gap: 20px;
+}
 .card-container2{
     display: grid;
     gap: 1rem;
 }
 .card2{
-    display: grid;
     background-color: rgb(18, 18, 11);
     padding: 20px;
     border: 1px solid rgb(41, 42, 34);
     border-radius: 30px;
+    color: rgb(154 153 141);
 }
 .card2 .card-header{
     margin-bottom: 1rem;
@@ -295,10 +310,16 @@ h1{
     font-weight: 500;
     margin-bottom: 1rem;
 }
-.card2 .card-body{
-    /* display: flex; */
+.card2 .card-body ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    list-style-position: inside;
+    color: rgb(154 153 141);
+    font-weight: 500;
 }
-.alt-style{
+#alt-style{
     background-color: #c0f928;
     color: black;
 }
