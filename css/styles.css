@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(8, 13, 32);
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 .container{
@@ -84,7 +84,7 @@ ul{
 .hero{
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     margin-top: -80px;
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 10%, rgba(121, 154, 39, 0.418) 50%, rgba(0, 0, 0, 1) 90%);
@@ -94,18 +94,26 @@ ul{
 }
 .hero .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    /* grid-template-columns: 1fr; */
     gap: 40px;
     color: white;
-    
-}
-.content{
-    display: flex;
-    align-items: center;
-    width: 100%;
+    padding: 100px 0 50px 0;
+    margin: 0 20px;
 }
 .text p{
     margin-bottom: 40px;
+}
+.graphic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(121, 154, 39);
 }
 .button-container{
     display: flex;
@@ -126,10 +134,9 @@ button{
     padding: 16px 20px;
     font-size: 16px;
     font-weight: 600;
-    text-transform: uppercase;
     cursor: pointer;
     border-radius: 50px;
-    width: 100%;
+    /* width: 100%; */
 }
 h1{
     font-size: clamp(3rem, 2.464rem + 1.429vw, 3.75rem);
@@ -138,8 +145,23 @@ h1{
     margin-bottom: 40px;
 }
 .hero h1 span{
+    color: #c0f928; 
+}
+.statistics{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+.statistics h2{
     color: #c0f928;
-    
+    font-size: 1.875rem;
+    margin-bottom: 5px;
+}
+.statistics p{
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin: 0;
 }
 /* .nuvvologo{
     position: absolute;
@@ -150,7 +172,7 @@ h1{
 .nuvvologo img{
     width: auto;
     height: clamp(3.55rem, -0.268rem + 10.714vw, 9.375rem); 
-    /* 60px */
+    
 }
 .mirror-nuvvologo{
     position: absolute;
@@ -179,50 +201,12 @@ h1{
     
 } */
 
-@media (max-width: 768px){
+@media (min-width: 768px){
     .hero{
-        height: auto;
+        height: 100vh;
     }
     .hero .container{
-        padding-top: 120px;
-        padding-bottom: 140px;
-    }
-}
-
-/* ABOUT */
-
-
-.about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: rgb(16, 23, 49);
-    border-radius: 20px 20px 0 0;
-    border-top: 1px solid rgb(40, 42, 49);
-}
-.about .container{
-    position: relative;
-    padding-top: clamp(6.25rem, -2.679rem + 23.81vw, 18.75rem);
-    padding-bottom: 150px;
-    text-align: center;
-    align-items: center;
-}
-.about span{
-    color: #799a27;
-}
-.text-aling{
-    display: flex;
-    width: 50%;
-    text-align: left;
-}
-@media (max-width: 768px){
-    .about .container{
-        padding-top: 120px;
-        padding-bottom: 90px;
-    }
-    .text-aling{
-        width: 100%;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -249,7 +233,7 @@ h1{
     padding: 0 0 0 20px;
 }
 .textcontent span{
-    color: rgb(121, 154, 39);
+    color: #c0f928;
 }
 .card-container{
     display: grid;
@@ -265,7 +249,7 @@ h1{
 }
 .card > h3{
     margin-bottom: 1rem;
-    color: #799a27;
+    color: #c0f928;
 }
 .grid-span-2{
     grid-column: span 2;
@@ -360,7 +344,7 @@ h1{
     padding-right: 0;
 }
 .our-process span{
-    color: rgb(121, 154, 39);
+    color: #c0f928;
 }
 .our-process h2{
     margin-bottom: 100px;
@@ -445,7 +429,7 @@ h1{
     display: inline-block;
     height: 1px;
     width: 80px;
-    background-color: rgb(121, 154, 39);
+    background-color: #c0f928;
     margin-bottom: 20px;
 }
 .contact-option-container{
@@ -467,7 +451,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(121, 154, 39, 0.418);
+    background-color: rgba(192, 249, 40, 0.418);
     border-radius: 4px;
     width: 36px;
     height: 36px;
@@ -484,7 +468,7 @@ h1{
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-    color: rgb(121, 154, 39);
+    color: #c0f928;
 }
 .form-container{
     box-sizing: border-box;
