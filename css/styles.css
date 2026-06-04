@@ -39,6 +39,7 @@ h2{
 p{
     font-weight: 600;
     line-height: 1.5rem;
+    color: rgb(154 153 141);
 }
 
 /* HEADER */
@@ -163,44 +164,6 @@ h1{
     font-size: 0.75rem;
     margin: 0;
 }
-/* .nuvvologo{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    bottom: 5px;
-}
-.nuvvologo img{
-    width: auto;
-    height: clamp(3.55rem, -0.268rem + 10.714vw, 9.375rem); 
-    
-}
-.mirror-nuvvologo{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top: 10px;
-}
-.mirror-nuvvologo img{
-    width: auto;
-    height: clamp(3.55rem, -0.268rem + 10.714vw, 9.375rem);
-}
-.N{
-    margin-right: clamp(1.25rem, -0.313rem + 4.167vw, 3.438rem);
-    
-}
-.U{
-    margin-right: clamp(0.938rem, 0.045rem + 2.381vw, 2.188rem);
-    
-}
-.V{
-    margin-right: clamp(0.625rem, 0.179rem + 1.19vw, 1.25rem);
-   
-}
-.O{
-    margin-left: clamp(0.438rem, 0.08rem + 0.952vw, 0.938rem);
-    
-} */
-
 @media (min-width: 768px){
     .hero{
         height: 100vh;
