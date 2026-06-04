@@ -31,7 +31,8 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 1440px;
-    padding: clamp(3.125rem, 0.893rem + 5.952vw, 6.25rem) 20px;
+    padding: clamp(3.125rem, 0.893rem + 5.952vw, 6.25rem) 0;
+    margin: 0 20px;
 }
 h2{
     font-size: clamp(2rem, 1.464rem + 1.429vw, 2.75rem);
@@ -59,8 +60,7 @@ header .container{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0 20px;
     background-color: rgba(0, 0, 0, 0.623);
     backdrop-filter: blur(20px);
     border: 1px solid rgb(40, 42, 49);
@@ -178,6 +178,7 @@ h1{
     display: flex;
     justify-content: center;
     width: 100%;
+    border-bottom: 1px solid rgb(41, 42, 34);
 }
 .services .container{
     padding-left: 0;
@@ -225,6 +226,10 @@ h1{
     line-height: 1.5rem;
 }
 .card-span{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: flex-start;
     background-color: #c0f928;
     color: black;
 }
@@ -236,8 +241,23 @@ h1{
     grid-template-columns: 1fr 1fr;
     margin-top: 1.5rem;
     gap: 0.5rem;
+    text-align: center;
 }
-
+@media (min-width: 768px){
+    .services .container{
+        
+    }
+    .card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card-span{
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+    .card-span div{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 
 
@@ -247,7 +267,6 @@ h1{
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgb(16, 23, 49);
 }
 .more-services .container{
     display: grid;
