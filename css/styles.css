@@ -73,7 +73,7 @@ a{
     font-weight: 400;
     font-size: 0.875rem;
 }
-ul{
+header ul{
     display: flex;
     gap: 20px;
     padding: 0;
@@ -244,9 +244,6 @@ h1{
     text-align: center;
 }
 @media (min-width: 768px){
-    .services .container{
-        
-    }
     .card-container{
         grid-template-columns: repeat(3, 1fr);
     }
@@ -270,49 +267,47 @@ h1{
 }
 .more-services .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 4rem;
-    align-items: start;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1480px;
+    gap: 3.125rem;
 }
-.item-1{
-    order: 2;
+.card-container2{
+    display: grid;
+    gap: 1rem;
 }
-.item-2{
-    order: 1;
+.card2{
+    display: grid;
+    background-color: rgb(18, 18, 11);
+    padding: 20px;
+    border: 1px solid rgb(41, 42, 34);
+    border-radius: 30px;
 }
-.more-services .card{
-    background-color: rgb(8, 13, 32);
+.card2 .card-header{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(41, 42, 34);
 }
-.more-services .textcontent{
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 0 20px 0 0;
-    text-align: end;
+.card2 .card-header h3{
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
-@media (max-width: 768px){
-    .item-1{
-        order: 1;
-    }
-    .item-2{
-        order: 2;
-    }
+.card2 .card-header h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.card2 .card-body{
+    /* display: flex; */
+}
+.alt-style{
+    background-color: #c0f928;
+    color: black;
+}
+@media (min-width: 768px){
     .more-services .container{
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
     }
-    .more-services .textcontent{
-        align-items: flex-start;
-        text-align: start;
-        padding: 0 20px;
-    }
-    .more-services .card-container{
-        padding: 0 20px;
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .card-container2{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
