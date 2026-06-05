@@ -91,9 +91,24 @@ header .container{
     margin: 0 20px;
     height: 50px;
 }
-header span{
+.logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.logo p{
+    box-sizing: content-box;
     font-size: 1.125rem;
+    letter-spacing: normal;
+    line-height: normal;
     font-weight: 700;
+    color: white;
+}
+.logo .highlight{
+    font-size: 1.5rem;
+}
+nav{
+    display: none;
 }
 a{
     text-decoration: none;
@@ -109,6 +124,11 @@ header ul{
 }
 .highlight{
     color: #c0f928; 
+}
+@media (min-width: 768px){
+    nav{
+        display: flex;
+    }
 }
 
 /* HERO */
