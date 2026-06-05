@@ -178,7 +178,6 @@ h1{
     display: flex;
     justify-content: center;
     width: 100%;
-    border-bottom: 1px solid rgb(41, 42, 34);
 }
 .services .container{
     padding-left: 0;
@@ -264,6 +263,8 @@ h1{
     display: flex;
     justify-content: center;
     width: 100%;
+    border-top: 1px solid rgb(41, 42, 34);
+    border-bottom: 1px solid rgb(41, 42, 34);
 }
 .more-services .container{
     display: grid;
@@ -296,7 +297,7 @@ h1{
     color: rgb(154 153 141);
 }
 .card2 .card-header{
-    margin-bottom: 1rem;
+    margin-bottom: rem;
     border-bottom: 1px solid rgb(41, 42, 34);
 }
 .card2 .card-header h3{
@@ -313,7 +314,7 @@ h1{
 .card2 .card-body ul{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 0;
     list-style-position: inside;
     color: rgb(154 153 141);
@@ -323,6 +324,9 @@ h1{
     background-color: #c0f928;
     color: black;
 }
+#alt-style ul{
+    color: black;
+}
 @media (min-width: 768px){
     .more-services .container{
         grid-template-columns: repeat(2, 1fr);
@@ -330,81 +334,8 @@ h1{
     .card-container2{
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-/* Our Process */
-
-.our-process{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    border-top: 1px solid rgb(40, 42, 49);
-    border-bottom: 1px solid rgb(40, 42, 49);
-}
-.our-process .container{
-    align-items: center;
-    text-align: left;
-    padding-left: 0;
-    padding-right: 0;
-}
-.our-process span{
-    color: #c0f928;
-}
-.our-process h2{
-    margin-bottom: 100px;
-    padding: 0 20px;
-    text-align: center;
-}
-.our-process h3{
-    font-size: 1.5rem;
-}
-.our-process-grid{
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 0 20px;
-    column-gap: 2rem;
-    row-gap: 6rem;
-}
-.our-process-card{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.card-img > img{
-    height: 50px;
-    width: auto;
-    margin-bottom: 1rem;
-}
-.card-text div > .material-symbols-outlined{
-    font-size: 50px;
-    margin-right: 1rem;
-}
-.card-text div{
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-.last-card{
-    justify-content: space-between;
-}
-.last-card .material-symbols-outlined{
-    font-size: 50px;
-}
-@media (max-width: 768px){
-    .our-process h2{
-        margin-bottom: 50px;
-    }
-    .our-process-grid{
-        row-gap: 2rem;
-    }
-    .card-text div{
-        justify-content: center;
-    }
-    .card-text div > .material-symbols-outlined{
-        font-size: 25px;
+    .card2 .card-header{
+        margin-bottom: 3rem;
     }
 }
 
@@ -413,18 +344,16 @@ h1{
 .getintouch{
     display: flex;
     justify-content: center;
-    background-color: rgb(16, 23, 49);
-    border-radius: 0 0 20px 20px;
-    border-bottom: 1px solid rgb(40, 42, 49);
+    padding: 50px 0;
+    border-bottom: 1px solid rgb(41, 42, 34);
 }
 .getintouch .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 4rem;
-    align-items: start;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1480px;
+    background-color: rgb(18, 18, 11);
+    border: 1px solid rgb(41, 42, 34);
+    border-radius: 30px;
+    padding: 20px;
 }
 .getintouch .textcontent > p{
     margin-bottom: 2.5rem;
@@ -444,14 +373,8 @@ h1{
     font-weight: 800;
     letter-spacing: 0.1rem;
 }
-.svg-background{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(192, 249, 40, 0.418);
-    border-radius: 4px;
-    width: 36px;
-    height: 36px;
+.contact-option svg{
+    color: #c0f928;
 }
 .material-symbols-outlined{
     font-family: 'Material Symbols Outlined';
@@ -467,18 +390,10 @@ h1{
     direction: ltr;
     color: #c0f928;
 }
-.form-container{
-    box-sizing: border-box;
-    padding: 0 20px;
-}
 form{
     display: flex;
     flex-direction: column;
-    padding: clamp(1rem, 0.286rem + 1.905vw, 2rem);
     gap: 1.25rem;
-    background-color: rgb(8, 13, 32); 
-    border: 1px solid rgb(40, 42, 49);
-    border-radius: 8px;
     font-size: 0.80rem;
     font-weight: 500;
 }
@@ -488,21 +403,20 @@ form div{
 }
 label{
     margin-bottom: 6px;
-    
 }
 input, select, textarea{
     box-sizing: border-box;
     padding: 11px 14px;
-    background-color: rgb(16, 23, 49);
+    background-color: rgb(0, 0, 0);
     border: 1px solid rgb(40, 42, 49);
-    border-radius: 4px;
+    border-radius: 20px;
     width: 100%;
     font-size: 0.9375rem;
     color: white;
     outline: none;
 }
 input:autofill, select:autofill, textarea:autofill{
-    background-color: rgb(16, 23, 49);
+    background-color: rgb(0, 0, 0);
 }
 select{
     cursor: pointer;
@@ -520,12 +434,14 @@ form button{
     text-transform: none;
     margin-top: 0.25rem;
 }
-@media (max-width: 768px){
-    .getintouch .container{
-        gap: 2rem;
+
+@media (min-width: 768px){
+    .getintouch{
+        padding: 100px 0;
     }
-    .getintouch .textcontent{
-        padding: 0 20px;
+    .getintouch .container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
     }
 }
 
@@ -540,6 +456,5 @@ footer{
 footer .container{
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
