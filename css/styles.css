@@ -148,10 +148,14 @@ header ul{
     padding: 80px 0 50px 0;
     margin: 0 20px;
 }
+.text{
+    animation: slideup 0.5s ease-in forwards;
+}
 .graphic{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: slideup 0.5s ease-in 0.5s forwards;
 }
 .base{
     width: 200px;
@@ -195,6 +199,16 @@ button{
     .hero .container{
         grid-template-columns: 1fr 1fr;
         padding: 200px 0 120px 0;
+    }
+}
+@keyframes slideup{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
