@@ -109,7 +109,7 @@ nav{
 nav a{
     text-decoration: none;
     color: white;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1rem;
 }
 header ul{
@@ -192,9 +192,6 @@ button{
     margin: 0;
 }
 @media (min-width: 768px){
-    .hero{
-        /* height: 100vh; */
-    }
     .hero .container{
         grid-template-columns: 1fr 1fr;
         padding: 200px 0 120px 0;
@@ -215,12 +212,11 @@ button{
 }
 .carousel-container-inner{
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
     width: 100%;
     gap: 48px;    
-    animation: loop 40s linear infinite;
+    animation: loop 15s linear infinite;
     margin-right: 48px;
 }
 @keyframes loop{
@@ -233,12 +229,28 @@ button{
 }
 .flex-items{
     display: flex;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     flex: 0 0 5em;
     align-items: center;
     gap: 48px;
     white-space: nowrap;
+}
+@media (min-width: 768px){
+    .hero .container{
+        grid-template-columns: 1fr 1fr;
+        padding: 200px 0 120px 0;
+    }
+    .carousel-container-inner{
+        gap: 48px;    
+        animation: loop 40s linear infinite;
+        margin-right: 48px;
+    }
+    .flex-items{
+        font-size: 1.875rem;
+        line-height: 1.2;
+        gap: 48px;
+    }
 }
 
 /* SERVICES */
@@ -265,7 +277,8 @@ button{
     color: #c0f928;
     font-size: clamp(0.75rem, 0.7rem + 0.195vw, 0.875rem);
     font-weight: 400;
-    /* letter-spacing: 0.1rem; */
+    line-height: 1;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
 .card-container{
@@ -370,6 +383,7 @@ button{
     font-size: 0.8rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
 }
 .card2 .card-header h4{
     font-size: 1.5rem;
