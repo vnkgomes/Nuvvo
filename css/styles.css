@@ -16,9 +16,6 @@ html {
     margin: 0;
     padding: 0;
 }
-:where(h1, h2){
-    margin-bottom: 24px;
-}
 body {
     margin: 0;
     padding: 0;
@@ -34,14 +31,39 @@ body {
     padding: clamp(3.125rem, 0.893rem + 5.952vw, 6.25rem) 0;
     margin: 0 20px;
 }
+h1{
+    font-size: clamp(4rem, 3.599rem + 1.556vw, 5rem);
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    margin-bottom: clamp(2rem, 1.8rem + 0.778vw, 2.5rem);
+}
+@media (min-width: 768px){
+    h1{
+        line-height: 0.9;
+    }
+}
 h2{
-    font-size: clamp(2rem, 1.464rem + 1.429vw, 2.75rem);
+    font-size: clamp(2rem, 1.599rem + 1.556vw, 3rem);
+    margin-bottom: 1.5rem;
+}
+h3{
+    font-size: clamp(1.5rem, 1.3rem + 0.778vw, 2rem);
+    font-weight: 500;
 }
 p{
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 0.95rem + 0.195vw, 1.125rem);
     font-weight: 600;
-    line-height: 1.6;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
     color: rgb(154 153 141);
+}
+ul{
+    font-size: clamp(1rem, 0.95rem + 0.195vw, 1.125rem);
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    font-weight: 600;
 }
 
 /* HEADER */
@@ -67,12 +89,17 @@ header .container{
     border: 1px solid rgb(40, 42, 49);
     border-radius: 50px;
     margin: 0 20px;
+    height: 50px;
+}
+header span{
+    font-size: 1.125rem;
+    font-weight: 700;
 }
 a{
     text-decoration: none;
     color: white;
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 header ul{
     display: flex;
@@ -100,14 +127,10 @@ header ul{
 .hero .container{
     display: grid;
     align-items: center;
-    /* grid-template-columns: 1fr; */
     gap: 3.125rem;
     color: white;
     padding: 100px 0 50px 0;
     margin: 0 20px;
-}
-.text p{
-    margin-bottom: 40px;
 }
 .graphic{
     display: flex;
@@ -119,7 +142,7 @@ header ul{
     height: 200px;
     background-color: rgb(121, 154, 39);
 }
-.button-container{
+/* .button-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -130,25 +153,19 @@ header ul{
 .button-container p{
     font-weight: 600;
     margin-bottom: 16px;
-}
+} */
 button{
     background-color: #c0f928;
     color: black;
     border: none;
     padding: 16px 20px;
-    font-size: 16px;
+    font-size: clamp(1rem, 0.95rem + 0.195vw, 1.125rem);
     font-weight: 600;
     cursor: pointer;
     border-radius: 50px;
-    /* width: 100%; */
+    margin: clamp(2rem, 1.8rem + 0.778vw, 2.5rem) 0;
 }
-h1{
-    font-size: clamp(2.75rem, 8vw, 7rem);
-    line-height: 0.9;
-    letter-spacing: -0.05em;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
+
 .italic{
     font-style: italic;
     font-weight: normal;
@@ -157,7 +174,6 @@ h1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 40px;
 }
 .statistics h2{
     color: #c0f928;
@@ -200,7 +216,7 @@ h1{
 }
 .intro > span, .intro > p{
     color: #c0f928;
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 0.7rem + 0.195vw, 0.875rem);
     font-weight: 400;
     /* letter-spacing: 0.1rem; */
     text-transform: uppercase;
@@ -222,14 +238,13 @@ h1{
 }
 .card h3{
     margin: 1.5rem 0 1rem 0;
-    font-size: 1.5rem;
-    font-weight: 500;
+
 }
-.card p{
+/* .card p{
     font-size: 0.9375rem;
     font-weight: 500;
     line-height: 1.5rem;
-}
+} */
 .card-span{
     display: flex;
     flex-direction: column;  
@@ -297,18 +312,17 @@ h1{
 }
 .card2{
     background-color: rgb(18, 18, 11);
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid rgb(41, 42, 34);
     border-radius: 30px;
     color: rgb(154 153 141);
 }
 .card2 .card-header{
-    margin-bottom: rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid rgb(41, 42, 34);
 }
 .card2 .card-header h3{
     font-size: 0.8rem;
-    font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
@@ -355,14 +369,14 @@ h1{
 }
 .getintouch .container{
     display: grid;
-    gap: 4rem;
+    gap: 2rem;
     background-color: rgb(18, 18, 11);
     border: 1px solid rgb(41, 42, 34);
     border-radius: 30px;
-    padding: 20px;
+    padding: 2rem;
 }
 .getintouch .textcontent > p{
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 .contact-option-container{
     display: flex;
@@ -373,11 +387,6 @@ h1{
     display: flex;
     align-items: center;
     gap: 0.87rem;
-}
-.contact-option h3{
-    font-size: 0.9rem;
-    font-weight: 800;
-    letter-spacing: 0.1rem;
 }
 .contact-option svg{
     color: #c0f928;
@@ -439,6 +448,7 @@ form button{
     letter-spacing: 0.01em;
     text-transform: none;
     margin-top: 0.25rem;
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px){
