@@ -75,7 +75,7 @@ header{
     color: white;
     width: 100%;
     height: 80px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
 }
@@ -134,7 +134,7 @@ header ul{
     justify-content: center;
     height: 100%;
     width: 100%;
-    margin-top: -80px;
+    /* margin-top: -80px; */
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 10%, rgba(121, 154, 39, 0.418) 50%, rgba(0, 0, 0, 1) 90%);
     background-size: contain;
     background-repeat: no-repeat;
@@ -148,14 +148,16 @@ header ul{
     padding: 80px 0 50px 0;
     margin: 0 20px;
 }
-.text{
-    animation: slideup 0.5s ease-in forwards;
-}
+/* .text{
+    overflow: hidden;
+    animation: slideup 0.5s ease-out forwards;
+} */
 .graphic{
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: slideup 0.5s ease-in 0.5s forwards;
+    /* overflow: hidden;
+    animation: slideup 0.5s ease-in 0.5s forwards; */
 }
 .base{
     width: 200px;
@@ -198,10 +200,10 @@ button{
 @media (min-width: 768px){
     .hero .container{
         grid-template-columns: 1fr 1fr;
-        padding: 200px 0 120px 0;
+        padding: 200px 0;
     }
 }
-@keyframes slideup{
+/* @keyframes slideup{
     0%{
         opacity: 0;
         transform: translateY(100px);
@@ -210,7 +212,7 @@ button{
         opacity: 1;
         transform: translateY(0);
     }
-}
+} */
 
 /* Carousel */
 .carousel-container{
