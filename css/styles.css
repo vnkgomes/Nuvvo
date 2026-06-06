@@ -557,6 +557,14 @@ button{
 .getintouch .textcontent > p{
     margin-bottom: 1.5rem;
 }
+.textcontent a{
+    text-decoration: none;
+    font-size: clamp(1rem, 0.95rem + 0.195vw, 1.125rem);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    color: rgb(154 153 141);
+}
 .contact-option-container{
     display: flex;
     flex-direction: column;
