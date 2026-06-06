@@ -9,8 +9,8 @@
     box-sizing: border-box;
 }
 :root{
-    --bar-width: 60px;
-    --bar-height: 8px;
+    --bar-width: 35px;
+    --bar-height: 4px;
     --hamburger-gap: 6px;
     --foreground: #333;
     --background: white;
@@ -101,12 +101,16 @@ header .container{
     height: 50px;
 }
 .burger-menu{
-    --x-width: cal(var(--hamburger-height) * 1.41421356237);
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
     display: flex;
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: max-content;
     cursor: pointer;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 10001;
 }
 .burger-menu::before, 
 .burger-menu::after, 
@@ -117,7 +121,8 @@ header .container{
     background-color: var(--foreground);
     border-radius: 9999px;
     transform-origin: right center;
-    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing),  translate var(--animation-timing);
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing),  translate var(--animation-timing),
+    background-color var(--animation-timing);
 }
 .burger-menu input{
     appearance: none;
@@ -129,16 +134,43 @@ header .container{
 .burger-menu:has(input:checked)::before{
     rotate: -45deg;
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
+    translate: 0 calc(var(--bar-height) / -2);
 }
 .burger-menu:has(input:checked)::after{
     rotate: 45deg;
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2);
+    translate: 0 calc(var(--bar-height) / 2);
 }
 .burger-menu input:checked{
     opacity: 0;
     width: 0;
+}
+.sidebar{
+    transition: translate var(--animation-timing);
+    /* display: none; */
+    translate: 150%;
+    padding: 0.5rem 1rem;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #c0f928;
+    color: black;
+    width: 100%;
+    height: 400px;
+    /* max-width: 10rem; */
+    /* max-height: 100vh; */
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+/* .sidebar ul{
+    display: flex;
+}
+.sidebar a{
+    color: white;
+} */
+.burger-menu:has(input:checked) + .sidebar{
+    translate: 0;
+    
 }
 header a{
     display: flex;
@@ -152,14 +184,33 @@ header a{
     color: white;
     text-decoration: none;
 }
-nav{
-    display: none;
-}
 nav a{
     text-decoration: none;
     color: white;
     font-weight: 600;
     font-size: 1rem;
+}
+#mobilenav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+#mobilenav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+#mobilenav li a{
+    font-size: 2rem;
+    color: black;
+}
+#desktopnav{
+    display: none;
 }
 header ul{
     display: flex;
@@ -171,8 +222,14 @@ header ul{
     color: #c0f928; 
 }
 @media (min-width: 768px){
-    nav{
+    #desktopnav{
         display: flex;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .sidebar{
+        display: none;
     }
 }
 
@@ -611,6 +668,9 @@ footer .container{
     padding: 100px 0 50px 0;
     margin: 0 20px;
 }
+.about-us h1{
+    line-height: 0.65em;
+}
 .purpose{
     display: flex;
     justify-content: center;
@@ -658,4 +718,9 @@ footer .container{
     object-fit: cover;
     object-position: center;
     filter: grayscale(100%);
+}
+@media (min-width: 768px){
+    .team-profiles{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
