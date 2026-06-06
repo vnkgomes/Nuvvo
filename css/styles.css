@@ -12,8 +12,8 @@
     --bar-width: 35px;
     --bar-height: 4px;
     --hamburger-gap: 6px;
-    --foreground: #333;
-    --background: white;
+    --foreground: white;
+    --background: #000;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -111,6 +111,16 @@ header .container{
     position: absolute;
     right: 20px;
     z-index: 10001;
+}
+.burger-menu:has(input:checked) {
+  --foreground: #000;
+  --background: white;
+}
+.burger-menu:has(input:focus-visible)::before,
+.burger-menu:has(input:focus-visible)::after,
+.burger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
 }
 .burger-menu::before, 
 .burger-menu::after, 
