@@ -144,7 +144,6 @@ header ul{
     display: grid;
     align-items: center;
     gap: 3.125rem;
-    color: white;
     padding: 80px 0 50px 0;
     margin: 0 20px;
 }
@@ -253,10 +252,6 @@ button{
     white-space: nowrap;
 }
 @media (min-width: 768px){
-    .hero .container{
-        grid-template-columns: 1fr 1fr;
-        padding: 200px 0 120px 0;
-    }
     .carousel-container-inner{
         gap: 48px;    
         animation: loop 40s linear infinite;
@@ -551,4 +546,60 @@ footer .container{
 }
 .copyright p{
     font-size: 0.75rem;
+}
+
+
+/* ABOUT PAGE */
+
+.about-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 100vh; */
+}
+.about-us .container{
+    padding: 100px 0 50px 0;
+    margin: 0 20px;
+}
+.purpose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid rgb(40, 42, 49);
+    border-bottom: 1px solid rgb(40, 42, 49);
+}
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(40, 42, 49);
+}
+.team-profiles{
+    display: grid;
+    gap: 3rem;
+    margin-top: 50px;
+}
+.team-profiles div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+.frame{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #c0f928;
+    border-radius: 200px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
