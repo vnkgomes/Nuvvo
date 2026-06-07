@@ -185,6 +185,9 @@ nav a{
     font-weight: 600;
     font-size: 1rem;
 }
+nav a:hover{
+    color: #c0f928;
+}
 #mobilenav{
     display: flex;
     align-items: center;
@@ -567,8 +570,13 @@ button{
     align-items: center;
     gap: 0.87rem;
 }
+.contact-option a:hover{
+    color: #c0f928;
+}
 .contact-option svg{
     color: #c0f928;
+    width: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
+    height: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
 }
 .material-symbols-outlined{
     font-family: 'Material Symbols Outlined';
