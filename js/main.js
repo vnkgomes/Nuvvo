@@ -27,3 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //         }
 //     });
 // });
+
+window.addEventListener('hashchange', function() {
+    history.replaceState(null, "", location.pathname + location.search);
+});
