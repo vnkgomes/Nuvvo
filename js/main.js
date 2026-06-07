@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         const targetId = this.getAttribute('href').substring(1);
+//         const targetElement = document.getElementById(targetId);
         
-        if(targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+//         if(targetElement) {
+//             targetElement.scrollIntoView({ behavior: 'smooth' });
             
-            // Clean the URL without reloading
-            history.replaceState(null, null, ' '); 
-        }
-    });
-});
+//             // Clean the URL without reloading
+//             history.replaceState(null, null, ' '); 
+//         }
+//     });
+// });
