@@ -9,7 +9,7 @@
     --background: #000;
     --alt-background: rgb(18, 18, 11);
     --neon-green: #c0f928;
-    --border: 1px solid rgb(41, 42, 34);
+    --border: 2px solid rgb(41, 42, 34);
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -107,7 +107,7 @@ header .container{
     padding: 0 20px;
     background-color: rgba(0, 0, 0, 0.623);
     backdrop-filter: blur(20px);
-    border: 1px solid rgb(40, 42, 49);
+    border: var(--border);
     border-radius: 50px;
     margin: 0 20px;
     height: 50px;
@@ -348,8 +348,8 @@ button{
 .carousel-container{
     padding: 1.5rem 0;
     width: 100%;
-    border-top: 1px solid rgb(41, 42, 34);
-    border-bottom: 1px solid rgb(41, 42, 34);
+    border-top: var(--border);
+    border-bottom: var(--border);
     overflow-x: auto;
     white-space: nowrap;
 }
@@ -430,7 +430,7 @@ button{
 .card{
     background-color: rgb(18, 18, 11);
     padding: 2rem;
-    border: 1px solid rgb(41, 42, 34);
+    border: var(--border);
     border-radius: 30px;
 }
 .card span{
@@ -484,8 +484,8 @@ button{
     display: flex;
     justify-content: center;
     width: 100%;
-    border-top: 1px solid rgb(41, 42, 34);
-    border-bottom: 1px solid rgb(41, 42, 34);
+    border-top: var(--border);
+    border-bottom: var(--border);
 }
 .more-services .container{
     display: grid;
@@ -513,13 +513,13 @@ button{
 .card2{
     background-color: rgb(18, 18, 11);
     padding: 2rem;
-    border: 1px solid rgb(41, 42, 34);
+    border: var(--border);
     border-radius: 30px;
     color: rgb(154 153 141);
 }
 .card2 .card-header{
     margin-bottom: 2rem;
-    border-bottom: 1px solid rgb(41, 42, 34);
+    border-bottom: var(--border);
 }
 .card2 .card-header h3{
     font-size: 0.8rem;
@@ -566,13 +566,13 @@ button{
     display: flex;
     justify-content: center;
     padding: 50px 0;
-    border-bottom: 1px solid rgb(41, 42, 34);
+    border-bottom: var(--border);
 }
 .getintouch .container{
     display: grid;
     gap: 2rem;
     background-color: rgb(18, 18, 11);
-    border: 1px solid rgb(41, 42, 34);
+    border: var(--border);
     border-radius: 30px;
     padding: 2rem;
 }
@@ -633,11 +633,11 @@ form div{
 label{
     margin-bottom: 6px;
 }
-input, select, textarea{
+form input, form select, form textarea{
     box-sizing: border-box;
     padding: 11px 14px;
     background-color: rgb(0, 0, 0);
-    border: 1px solid rgb(40, 42, 49);
+    border: var(--border);
     border-radius: 20px;
     width: 100%;
     font-size: 0.9375rem;
@@ -739,15 +739,15 @@ footer a{
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-top: 1px solid rgb(40, 42, 49);
-    border-bottom: 1px solid rgb(40, 42, 49);
+    border-top: var(--border);
+    border-bottom: var(--border);
 }
 .team{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid rgb(40, 42, 49);
+    border-bottom: var(--border);
 }
 .team-profiles{
     display: grid;
@@ -809,12 +809,12 @@ footer a{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     background-color: rgb(18, 18, 11);
-    border: 1px solid rgb(41, 42, 34);
+    border: var(--border);
     border-radius: 30px;
 }
 .deliver-card{
     padding: 2rem;
-    border-bottom: 1px solid rgb(41, 42, 34);
+    border-bottom: var(--border);
 }
 .deliver-card h2{
     margin-top: 1.5rem;
@@ -833,7 +833,7 @@ footer a{
         grid-template-rows: none;
     }
     .deliver-card{
-        border-right: 1px solid rgb(41, 42, 34);
+        border-right: var(--border);
         border-bottom: none;
     }
     .remove-border{
@@ -847,8 +847,8 @@ footer a{
     display: flex;
     justify-content: center;
     width: 100%;
-    border-top: 1px solid rgb(41, 42, 34);
-    border-bottom: 1px solid rgb(41, 42, 34);
+    border-top: var(--border);
+    border-bottom: var(--border);
 }
 .projects .container{
     display: grid;
@@ -856,8 +856,29 @@ footer a{
 }
 .projects-container{
     display: grid;
+    width: 100%;
+    gap: 2rem;
+}
+.projects-card{
+    display: grid;
+    gap: 2rem;
     background-color: var(--alt-background);
     border: var(--border);
     padding: 30px 30px 0 30px;
     border-radius: 30px;
+    width: 100%;
+}
+.projects-img{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.projects-img img{
+    object-fit: cover;
+    width: 100%;
+}
+@media (min-width: 768px){
+    .projects-container{
+        grid-template-columns: 1fr 1fr;
+    }
 }
