@@ -859,6 +859,19 @@ footer a{
     width: 100%;
     gap: 2rem;
 }
+.projects-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects-main button{
+    margin: 0;
+    border-radius: 99999px;
+}
+.projects-main button a{
+    margin: 0;
+    padding: 0;
+}
 .projects-card{
     display: grid;
     gap: 2rem;
