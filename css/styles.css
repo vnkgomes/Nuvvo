@@ -7,6 +7,9 @@
     --hamburger-gap: 6px;
     --foreground: white;
     --background: #000;
+    --alt-background: rgb(18, 18, 11);
+    --neon-green: #c0f928;
+    --border: 1px solid rgb(41, 42, 34);
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -22,7 +25,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Space Grotesk', sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--background);
     color: white;
 }
 .container{
@@ -236,18 +239,26 @@ header ul{
 .hero{
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 100dvh;
     width: 100%;
     /* margin-top: -80px; */
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 10%, rgba(121, 154, 39, 0.418) 50%, rgba(0, 0, 0, 1) 90%);
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    backdrop-filter: blur(300px);
+    /* backdrop-filter: blur(300px); */
+}
+@media (min-width: 1020px){
+    .hero{
+       background-image: url(../assets/images/hero-marketing-hGVvPZLH.jpg); 
+       background-size: cover;
+     background-position: right;
+    }
 }
 .hero .container{
     display: grid;
     align-items: center;
-    gap: 3.125rem;
+    /* gap: 3.125rem; */
     padding: 100px 0 50px 0;
     margin: 0 20px;
 }
@@ -571,7 +582,7 @@ button{
     gap: 0.87rem;
 }
 .contact-option a:hover{
-    color: #c0f928;
+    color: rgb(192, 249, 40);
 }
 .contact-option svg{
     color: #c0f928;
@@ -787,4 +798,25 @@ footer .container{
     .remove-border{
         border: none;
     }
+}
+
+/* PROJECTS */
+
+.projects{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid rgb(41, 42, 34);
+    border-bottom: 1px solid rgb(41, 42, 34);
+}
+.projects .container{
+    display: grid;
+    gap: 2rem;
+}
+.projects-container{
+    display: grid;
+    background-color: var(--alt-background);
+    border: var(--border);
+    padding: 30px 30px 0 30px;
+    border-radius: 30px;
 }
