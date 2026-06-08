@@ -69,6 +69,22 @@ ul{
     line-height: 1.5;
     letter-spacing: -0.03em;
     font-weight: 600;
+    list-style-type: none;
+}
+li{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+li .bi-arrow-right-short{
+    color: var(--neon-green);
+    width: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
+    height: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
+}
+li .bi-arrow-right-short-alt{
+    color: var(--background);
+    width: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
+    height: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
 }
 
 /* HEADER */
@@ -487,9 +503,9 @@ button{
     list-style-position: inside;
     font-weight: 600;
 }
-.textcontent ul li{
+/* .textcontent ul li{
     gap: 20px;
-}
+} */
 .card-container2{
     display: grid;
     gap: 1rem;
@@ -593,7 +609,7 @@ button{
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
-    font-size: 18px;  /* Preferred icon size */
+    font-size: 18px;  
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -668,12 +684,37 @@ footer{
     width: 100%;
 }
 footer .container{
-    justify-content: center;
+    display: grid;
+    gap: 2rem;
+    /* justify-content: center; */
     align-items: center;
     padding: 50px 0;
 }
+footer a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.125rem;
+    letter-spacing: normal;
+    line-height: 1.175;
+    font-weight: 700;
+    gap: 0.25rem;
+    color: white;
+    text-decoration: none;
+}
 .copyright p{
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.661rem + 0.238vw, 0.875rem);
+}
+@media (min-width: 768px){
+    footer .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .copyright{
+        text-align: center;
+    }
+    footer a{
+        margin-left: 20px;
+    }
 }
 
 
