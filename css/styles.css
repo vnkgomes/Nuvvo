@@ -304,6 +304,11 @@ button{
     cursor: pointer;
     border-radius: 50px;
     margin: clamp(2rem, 1.8rem + 0.778vw, 2.5rem) 0;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #c0f92896;
+    color: white;
 }
 .italic{
     font-style: italic;
@@ -867,10 +872,29 @@ footer a{
 .projects-main button{
     margin: 0;
     border-radius: 99999px;
+    padding: 0;
+    width: 60px;
+    height: 60px;
 }
 .projects-main button a{
+    display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
+}
+button .bi-arrow-up-right{
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 1px;
+    paint-order: stroke fill;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: size 0.3s ease;
+}
+button:hover .bi-arrow-up-right{
+    width: 20px;
+    height: 20px;
 }
 .projects-card{
     display: grid;
