@@ -293,6 +293,9 @@ header ul{
     width: 200px;
     height: 200px;
     background-color: rgb(121, 154, 39);
+}button a {
+    text-decoration: none;
+    color: var(--background);
 }
 button{
     background-color: #c0f928;
@@ -305,6 +308,9 @@ button{
     border-radius: 50px;
     margin: clamp(2rem, 1.8rem + 0.778vw, 2.5rem) 0;
     transition: background-color 0.3s ease;
+}
+button a {
+    text-decoration: none;
 }
 button:hover{
     background-color: #c0f92896;
