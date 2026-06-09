@@ -80,12 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Remove /index.html if present
             if (cleanPath.endsWith('/sobre.html')) {
-                cleanPath = cleanPath.slice(0, -10); // Remove 'index.html'
+                cleanPath = cleanPath.slice(0, -5); // Remove 'index.html'
             }
 
             // Remove /index.html if present
             if (cleanPath.endsWith('/portfolio.html')) {
-                cleanPath = cleanPath.slice(0, -14); // Remove 'index.html'
+                cleanPath = cleanPath.slice(0, -5); // Remove 'index.html'
             }
             
             // Remove trailing slash if present (optional)
