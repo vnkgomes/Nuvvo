@@ -1,12 +1,3 @@
-// Google Analytics
-window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-J07998DW3X');
-
-// 
-
 document.addEventListener('DOMContentLoaded', () => {
   const burgerCheckbox = document.querySelector('.burger-menu input[type="checkbox"]');
   const mobileNavLinks = document.querySelectorAll('#mobilenav a');
