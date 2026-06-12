@@ -28,6 +28,11 @@ body {
     background-color: var(--background);
     color: white;
 }
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -173,7 +178,7 @@ header .container{
     padding: 0.5rem 1rem;
     padding-top: 90px;
     padding-bottom: 90px;
-    background-color: #c0f928;
+    background-color: var(--neon-green);
     color: black;
     width: 100%;
     height: 400px;
@@ -205,7 +210,7 @@ nav a{
     font-size: 1rem;
 }
 nav a:hover{
-    color: #c0f928;
+    color: var(--neon-green);
 }
 #mobilenav{
     display: flex;
@@ -236,7 +241,7 @@ header ul{
     list-style: none;
 }
 .highlight{
-    color: #c0f928; 
+    color: var(--neon-green); 
 }
 @media (min-width: 768px){
     #desktopnav{
@@ -253,53 +258,41 @@ header ul{
 /* HERO */
 
 .hero{
-    display: flex;
-    justify-content: center;
     height: 100%;
-    width: 100%;
-    /* margin-top: -80px; */
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 10%, rgba(121, 154, 39, 0.418) 50%, rgba(0, 0, 0, 1) 90%);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    /* backdrop-filter: blur(300px); */
 }
 @media (min-width: 1020px){
     .hero{
-       background-image: url(../assets/images/hero-marketing-hGVvPZLH.jpg); 
-       background-size: cover;
-     background-position: right;
+        background-image: url(../assets/images/hero-marketing-hGVvPZLH.jpg); 
+        background-size: cover;
+        background-position: right;
     }
 }
 .hero .container{
     display: grid;
     align-items: center;
-    /* gap: 3.125rem; */
     padding: 100px 0 50px 0;
     margin: 0 20px;
 }
-/* .text{
-    overflow: hidden;
-    animation: slideup 0.5s ease-out forwards;
-} */
 .graphic{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden;
-    animation: slideup 0.5s ease-in 0.5s forwards; */
 }
 .base{
     width: 200px;
     height: 200px;
-    background-color: rgb(121, 154, 39);
+    background-color: #799a27;
 }button a {
     text-decoration: none;
     color: var(--background);
 }
 button{
-    background-color: #c0f928;
-    color: black;
+    background-color: var(--neon-green);
+    color: var(--background);
     border: none;
     padding: 16px 20px;
     font-size: clamp(1rem, 0.95rem + 0.195vw, 1.125rem);
@@ -328,7 +321,7 @@ button:hover{
     width: 90px;
 }
 .statistics h2{
-    color: #c0f928;
+    color: var(--neon-green);
     font-size: 1.875rem;
     margin-bottom: 5px;
     font-weight: 400;
@@ -344,16 +337,6 @@ button:hover{
         padding: 200px 0;
     }
 }
-/* @keyframes slideup{
-    0%{
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
 
 /* Carousel */
 .carousel-container{
@@ -427,7 +410,7 @@ button:hover{
     margin-bottom: 0.5rem;
 }
 .intro > span, .intro > p{
-    color: #c0f928;
+    color: var(--neon-green);
     font-size: clamp(0.75rem, 0.7rem + 0.195vw, 0.875rem);
     font-weight: 400;
     line-height: 1;
@@ -461,7 +444,7 @@ button:hover{
     flex-direction: column;  
     justify-content: center;
     align-items: flex-start;
-    background-color: #c0f928;
+    background-color: var(--neon-green);
     color: black;
 }
 .card-span span, .card-span p{
@@ -487,9 +470,7 @@ button:hover{
     }
 }
 
-
-
-/* More Services */
+/* -----More Services----- */
 
 .more-services{
     display: flex;
@@ -514,9 +495,6 @@ button:hover{
     list-style-position: inside;
     font-weight: 600;
 }
-/* .textcontent ul li{
-    gap: 20px;
-} */
 .card-container2{
     display: grid;
     gap: 1rem;
@@ -553,7 +531,7 @@ button:hover{
     font-weight: 500;
 }
 #alt-style{
-    background-color: #c0f928;
+    background-color: var(--neon-green);
     color: black;
 }
 #alt-style ul{
@@ -612,7 +590,7 @@ button:hover{
     color: rgb(192, 249, 40);
 }
 .contact-option svg{
-    color: #c0f928;
+    color: var(--neon-green);
     width: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
     height: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
 }
@@ -628,7 +606,7 @@ button:hover{
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-    color: #c0f928;
+    color: var(--neon-green);
 }
 form{
     display: flex;
@@ -781,7 +759,7 @@ footer a{
 .frame{
     width: 300px;
     height: 300px;
-    border: 2px solid #c0f928;
+    border: 2px solid var(--neon-green);
     border-radius: 200px;
     overflow: hidden;
     margin-bottom: 1rem;
