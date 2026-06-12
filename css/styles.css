@@ -876,3 +876,27 @@ button:hover .bi-arrow-up-right{
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* -----VIBE ARQUITETURA----- */
+
+.case-vibe .container{
+    padding-top: 100px;
+}
+.vibe-home{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.vibe-home img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@media (min-width: 768px) {
+    .case-vibe .container {
+        padding: 180px 0 100px 0;
+    }
+    .vibe-home img{
+        width: 70%;
+    }
+}
