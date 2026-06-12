@@ -34,12 +34,12 @@ section{
     width: 100%;
 }
 .container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100%;
     max-width: 1440px;
     padding: clamp(3.125rem, 0.893rem + 5.952vw, 6.25rem) 0;
     margin: 0 20px;
+    gap: 3.125rem;
 }
 h1{
     font-size: clamp(4rem, 3.599rem + 1.556vw, 5rem);
@@ -92,7 +92,7 @@ li .bi-arrow-right-short-alt{
     height: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
 }
 
-/* HEADER */
+/* -----HEADER----- */
 
 header{
     display: flex;
@@ -106,6 +106,7 @@ header{
     z-index: 1000;
 }
 header .container{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -179,7 +180,7 @@ header .container{
     padding-top: 90px;
     padding-bottom: 90px;
     background-color: var(--neon-green);
-    color: black;
+    color: var(--background);
     width: 100%;
     height: 400px;
     position: fixed;
@@ -229,7 +230,7 @@ nav a:hover{
 }
 #mobilenav li a{
     font-size: 2rem;
-    color: black;
+    color: var(--background);
 }
 #desktopnav{
     display: none;
@@ -255,7 +256,7 @@ header ul{
     }
 }
 
-/* HERO */
+/* -----HERO----- */
 
 .hero{
     height: 100%;
@@ -272,10 +273,8 @@ header ul{
     }
 }
 .hero .container{
-    display: grid;
     align-items: center;
     padding: 100px 0 50px 0;
-    margin: 0 20px;
 }
 .graphic{
     display: flex;
@@ -338,7 +337,8 @@ button:hover{
     }
 }
 
-/* Carousel */
+/* -----Carousel----- */
+
 .carousel-container{
     padding: 1.5rem 0;
     width: 100%;
@@ -389,20 +389,8 @@ button:hover{
     }
 }
 
-/* SERVICES */
+/* -----SERVICES----- */
 
-.services{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.services .container{
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 20px;
-    display: grid;
-    gap: 3.125rem;
-}
 .intro{
     display: flex;
     align-items: center;
@@ -422,7 +410,7 @@ button:hover{
     gap: 0.8rem;
 }
 .card{
-    background-color: rgb(18, 18, 11);
+    background-color: var(--alt-background);
     padding: 2rem;
     border: var(--border);
     border-radius: 30px;
@@ -445,10 +433,10 @@ button:hover{
     justify-content: center;
     align-items: flex-start;
     background-color: var(--neon-green);
-    color: black;
+    color: var(--background);
 }
 .card-span span, .card-span p{
-    color: black;
+    color: var(--background);
 }
 .card-span div{
     display: flex;
@@ -473,15 +461,8 @@ button:hover{
 /* -----More Services----- */
 
 .more-services{
-    display: flex;
-    justify-content: center;
-    width: 100%;
     border-top: var(--border);
     border-bottom: var(--border);
-}
-.more-services .container{
-    display: grid;
-    gap: 3.125rem;
 }
 .more-services .textcontent > p{
     margin-bottom: 2.5rem;
@@ -500,7 +481,7 @@ button:hover{
     gap: 1rem;
 }
 .card2{
-    background-color: rgb(18, 18, 11);
+    background-color: var(--alt-background);
     padding: 2rem;
     border: var(--border);
     border-radius: 30px;
@@ -532,10 +513,10 @@ button:hover{
 }
 #alt-style{
     background-color: var(--neon-green);
-    color: black;
+    color: var(--background);
 }
 #alt-style ul{
-    color: black;
+    color: var(--background);
 }
 @media (min-width: 768px){
     .more-services .container{
@@ -549,18 +530,15 @@ button:hover{
     }
 }
 
-/* Entre em contato */
+/* -----Entre em contato----- */
 
 .getintouch{
-    display: flex;
-    justify-content: center;
     padding: 50px 0;
     border-bottom: var(--border);
 }
 .getintouch .container{
-    display: grid;
     gap: 2rem;
-    background-color: rgb(18, 18, 11);
+    background-color: var(--alt-background);
     border: var(--border);
     border-radius: 30px;
     padding: 2rem;
@@ -664,7 +642,7 @@ form button{
     }
 }
 
-/* FOOTER */
+/* -----FOOTER----- */
 
 footer{
     display: flex;
@@ -673,9 +651,7 @@ footer{
     width: 100%;
 }
 footer .container{
-    display: grid;
     gap: 2rem;
-    /* justify-content: center; */
     align-items: center;
     padding: 50px 0;
 }
@@ -706,19 +682,14 @@ footer a{
     }
 }
 
-
-/* ABOUT PAGE */
+/* -----ABOUT PAGE----- */
 
 .about-us{
-    display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 100vh; */
 }
 .about-us .container{
     padding: 100px 0 50px 0;
-    margin: 0 20px;
 }
 .about-us h1{
     line-height: 0.65em;
@@ -772,6 +743,9 @@ footer a{
     filter: grayscale(100%);
 }
 @media (min-width: 768px){
+    .about-us .container{
+        padding: 180px 0 100px 0;
+    }
     .team-profiles{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -782,7 +756,7 @@ footer a{
     }
 }
 
-/* PORTIFOLIO PAGE */
+/* -----PORTIFOLIO PAGE----- */
 
 .portfolio{
     display: flex;
@@ -790,14 +764,13 @@ footer a{
     width: 100%;
 }
 .portfolio .container{
-    display: grid;
     gap: 2rem;
     padding: 100px 0 50px 0;
 }
 .deliver-container{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    background-color: rgb(18, 18, 11);
+    background-color: var(--alt-background);
     border: var(--border);
     border-radius: 30px;
 }
@@ -830,7 +803,7 @@ footer a{
     }
 }
 
-/* PROJECTS */
+/* -----PROJECTS----- */
 
 .projects{
     display: flex;
