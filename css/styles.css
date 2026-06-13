@@ -464,6 +464,9 @@ button:hover{
     border-top: var(--border);
     border-bottom: var(--border);
 }
+.more-services .container{
+    gap: 2rem;
+}
 .more-services .textcontent > p{
     margin-bottom: 2.5rem;
 }
