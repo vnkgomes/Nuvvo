@@ -58,3 +58,30 @@ if (document.readyState === 'loading') {
 } else {
     removeHashAndProcess();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible'); 
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    // A slightly lower threshold ensures top-of-page items trigger immediately
+    threshold: 0.05 
+  });
+
+  // Watch all items
+  const elements = document.querySelectorAll('.cascade-item');
+  elements.forEach((el) => {
+    observer.observe(el);
+    
+    // Fallback: If the element is already inside the viewport on load, trigger it immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+      el.classList.add('is-visible');
+      observer.unobserve(el);
+    }
+  });
+});
