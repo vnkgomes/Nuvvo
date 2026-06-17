@@ -741,20 +741,15 @@ footer a{
 .about-us{
     align-items: center;
     width: 100%;
+    height: 100vh;
+    border-bottom: var(--border);
 }
 .about-us .container{
     padding: 100px 0 50px 0;
 }
 .about-us h1{
+    font-size: clamp(7.5rem, 2.143rem + 14.286vw, 15rem);
     line-height: 0.65em;
-}
-.purpose{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-top: var(--border);
-    border-bottom: var(--border);
 }
 .team{
     display: flex;
@@ -797,8 +792,8 @@ footer a{
     filter: grayscale(100%);
 }
 @media (min-width: 768px){
-    .about-us .container{
-        padding: 180px 0 100px 0;
+    .about-us{
+        height: 100vh;
     }
     .team-profiles{
         grid-template-columns: repeat(2, 1fr);
