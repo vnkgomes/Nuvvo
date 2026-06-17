@@ -741,7 +741,7 @@ footer a{
 .about-us{
     align-items: center;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     border-bottom: var(--border);
 }
 .about-us .container{
