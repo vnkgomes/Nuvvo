@@ -839,6 +839,9 @@ footer a{
     border: none;
 }
 @media (min-width: 768px){
+    .portfolio{
+        height: 100vh;
+    }
     .portfolio .container{
         padding: 180px 0 100px 0;
     }
