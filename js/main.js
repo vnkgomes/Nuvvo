@@ -63,25 +63,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible'); 
-        observer.unobserve(entry.target); 
+        const container = entry.target;
+        // Find all cascade items anywhere inside this entire section
+        const items = container.querySelectorAll('.cascade-item');
+        
+        items.forEach((item, index) => {
+          item.style.setProperty('--i', index);
+          item.classList.add('is-visible');
+        });
+        
+        observer.unobserve(container); 
       }
     });
   }, {
-    // A slightly lower threshold ensures top-of-page items trigger immediately
-    threshold: 0.05 
+    threshold: 0.1,
+    rootMargin: "0px 0px 50px 0px"
   });
 
-  // Watch all items
-  const elements = document.querySelectorAll('.cascade-item');
-  elements.forEach((el) => {
-    observer.observe(el);
-    
-    // Fallback: If the element is already inside the viewport on load, trigger it immediately
-    const rect = el.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-      el.classList.add('is-visible');
-      observer.unobserve(el);
-    }
+  // Target all <section> elements, plus any global wrappers that sit outside sections
+  const sections = document.querySelectorAll('section, .carousel-container');
+  sections.forEach((section) => {
+    observer.observe(section);
   });
 });

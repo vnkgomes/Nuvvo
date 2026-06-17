@@ -98,35 +98,23 @@ li .bi-arrow-right-short-alt{
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
+/* Mobile Settings */
 @keyframes fadeUpMobile {
-  from { 
-    opacity: 0; 
-    transform: translate3d(0, 20px, 0); /* Shorter, hardware-accelerated lift */
-  }
-  to { 
-    opacity: 1; 
-    transform: translate3d(0, 0, 0);
-  }
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 .cascade-item.is-visible {
-  /* 0.35s base delay + (Index * 0.10s stagger gap) */
-  /* Item 0: 0.35s | Item 1: 0.45s | Item 2: 0.55s | Item 3: 0.65s */
   animation: fadeUpMobile 0.8s calc(0.2s + (var(--i) * 0.08s)) forwards;
 }
+
+/* Desktop Settings (768px+) */
 @media (min-width: 768px) {
   @keyframes fadeUpDesktop {
-    from { 
-      opacity: 0; 
-      transform: translateY(30px); /* Your original 30px lift */
-    }
-    to { 
-      opacity: 1; 
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   .cascade-item.is-visible {
-    /* Your exact original desktop timings */
     animation: fadeUpDesktop 0.9s calc(0.35s + (var(--i) * 0.10s)) forwards;
   }
 }
