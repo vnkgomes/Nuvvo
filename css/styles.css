@@ -227,7 +227,6 @@ header a{
     letter-spacing: normal;
     line-height: 1.175;
     font-weight: 700;
-    gap: 0.25rem;
     color: white;
     text-decoration: none;
 }
@@ -717,7 +716,6 @@ footer a{
     letter-spacing: normal;
     line-height: 1.175;
     font-weight: 700;
-    gap: 0.25rem;
     color: white;
     text-decoration: none;
 }
