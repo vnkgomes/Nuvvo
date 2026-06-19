@@ -302,30 +302,6 @@ header ul{
     align-items: center;
     padding: 100px 0 50px 0;
 }
-/* .hero-title{
-    opacity: 0;
-    animation: fadeUp 0.9s 0.35s forwards;
-}
-.hero-subtitle{
-    opacity: 0;
-    animation: fadeUp 0.9s 0.45s forwards;
-}
-.hero-button{
-    opacity: 0;
-    animation: fadeUp 0.9s 0.55s forwards;
-}
-.hero-stats1{
-    opacity: 0;
-    animation: fadeUp 0.9s 0.65s forwards;
-}
-.hero-stats2{
-    opacity: 0;
-    animation: fadeUp 0.9s 0.75s forwards;
-}
-.hero-stats3{
-    opacity: 0;
-    animation: fadeUp 0.9s 0.85s forwards;
-} */
 .graphic{
     display: flex;
     align-items: center;
@@ -344,6 +320,7 @@ button{
     color: var(--background);
     border: none;
     padding: 16px 20px;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(1rem, 0.95rem + 0.195vw, 1.125rem);
     font-weight: 500;
     cursor: pointer;
